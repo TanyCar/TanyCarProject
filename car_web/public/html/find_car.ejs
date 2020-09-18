@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I Love Tany</title>
+    <!-- Bootstrap -->
+    <link href="../css/Tany_narae.css" rel="stylesheet">
+  <style type="text/css">
+    #navbarDropdown {
+	width: 30px;
+}
+    .blank {
+	width: 30px;
+}
+    .IMGBOX {
+	/* [disabled]height: 200px; */
+	width: 40%;
+	margin-left: auto;
+	margin-right: 0px;
+	/* [disabled]display: block; */
+	text-align: center;
+	/* [disabled]-webkit-box-sizing: content-box; */
+	/* [disabled]-moz-box-sizing: content-box; */
+	/* [disabled]box-sizing: content-box; */
+	float: left;
+}
+    .IMGFrame {
+	width: 100%;
+	position: static;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+    .InfoStart {
+	background-color: rgba(142,169,219,0.60);
+	width: 100pc;
+	padding-left: 30px;
+	border-radius: 20px;
+}
+    .InfoBox {
+	width: 30%;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+    .InfoValue {
+	width: 70%;
+	float: none;
+	text-align: right;
+	position: static;
+	margin-top: 10px;
+	padding-right: 30px;
+}
+    .middleBox {
+	width: 100%;
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	display: flex;
+}
+  .middle_box {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 900px;
+	position: relative;
+	display: inline-block;
+}
+  .rentbox {
+	border: 3px solid rgba(142,169,219,0.30);
+	background-color: rgba(232,237,247,0.91);
+	height: auto;
+	margin-top: 50px;
+	color: #535B63;
+	/* [disabled]margin-bottom: 30px; */
+	max-width: 900px;
+	width: 900px;
+	font-family: "12롯데마트드림Bold", "12롯데마트드림Light", "12롯데마트드림Medium";
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+  .rentBoxLeft {
+	height: 100px;
+	width: 30%;
+}
+  </style>
+    <link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <!-- <script src="jQueryAssets/jquery-1.11.1.min.js"></script> -->
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.datepicker.min.js"></script>
+  <script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+  </head>
+<body>
+    <script>
+        var mysql=require('mysql');
+
+        var pool=mysql.createPool({
+            connectionLimit : 10,
+            host : 'localhost',
+            user : 'root',
+            password : 'yulim1104',
+            database : 'tany',
+            debug : false
+        });
+    </script>
+	 <!--해보자-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="index.ejs">
+    <div class="LogoBox"><img src="../images/LogoBig.png" width="39" height="40" alt=""/></div></a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active"> <a class="nav-link" href="#">소개 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="#">요금 안내 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="car_enroll.ejs">차량 등록 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="find_car.ejs">예약하기  </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="mypage.ejs">마이페이지 </a> </li>
+           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 사고관리 </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="accident_confirm.ejs">사고 조회 </a> 
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="accident_enroll.ejs">내역 입력 </a> </div>
+            </li>
+          </ul>
+<% data.forEach(function(item,index){ %>
+            <span style="font-size: 14px"><b><%= item.memID%></b></span>  
+<% });%>  &nbsp
+            <a class="nav-link" href="index1.ejs">로그아웃</a>
+         <form class="form-inline my-2 my-lg-0">
+           <input type="search" class="form-control mr-sm-2" placeholder="Search" size="10" aria-label="Search">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+	
+<section>
+  <div class="container ">
+    <div class="row">
+		<div class="rentbox">
+     			 <form method="post">
+  	<table width="300" border="1" cellpadding="5" class="no_border" align="center">
+    <tbody>
+	  <tr><td colspan="2" align="center">시작 시간 </td></tr>
+      <tr align="center">
+        <td rowspan="2" class="no_border">
+          <select>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+			  <option>9</option><option>10</option><option>11</option><option>12</option>
+			  <option>13</option><option>14</option><option>15</option><option>16</option>
+			  <option>17</option><option>18</option><option>19</option><option>20</option>
+			  <option>21</option><option>22</option><option>23</option><option>24</option>
+            </select>
+          :
+          <select>
+            <option>10</option><option>20</option><option>30</option><option>40</option><option>50</option>
+            </select>
+          </td>
+        <td class="no_border"><select><option>월요일</option><option>화요일 </option></select></td>
+        </tr>
+      <tr align="center">
+        <td>
+          <input type="date"></td>
+        </tr>
+      </tbody>
+  </table>
+  <div class="middle_arrow"><img src="../images/index/arrow_2.png" width="208" height="98" /></div>
+	
+	<div id="Righ_time">
+	  <table width="300" border="1" cellpadding="5" class="no_border" align="center">
+  <tbody>
+	  <tr><td colspan="2" align="center">종료 시간 </td></tr>
+    <tr class="no_border" align="center">
+      <td rowspan="2" class="no_border" align="center">
+		  <select>
+		  		<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+			  <option>9</option><option>10</option><option>11</option><option>12</option>
+			  <option>13</option><option>14</option><option>15</option><option>16</option>
+			  <option>17</option><option>18</option><option>19</option><option>20</option>
+			  <option>21</option><option>22</option><option>23</option><option>24</option>
+		  </select>
+		  :
+		  <select>
+		  		<option>10</option><option>20</option><option>30</option><option>40</option><option>50</option>
+		  </select>
+	  </td>
+	  <td><select><option>월요일</option><option>화요일 </option></select></td>
+    </tr>
+    <tr>
+      <td class="no_border">
+		  <input type="date"></td>
+    </tr>
+  </tbody>
+ </table>
+	
+
+</div>
+				</form>
+                     <div id="tab1">왕복 </div>
+         <div id="tab2">편도 </div>
+        <div id="where">
+          <div id="ZONE"> 대여 ZONE  <input type="text" id="ZONE_input"></div>
+        </div>
+			<input type="submit" value="검색" class="blue_button">
+		</div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row">
+      <div class="middle_box">
+		  <hr><hr>
+		  <div class="IndexLeftIMG"><img src="<% data.forEach(function(item,index){ %>
+          <%= item.carPIC2 %>
+          <% });%>" width="643" height="373" alt=""></div>
+	    <div class="TextBoxRight"><br>
+              <script>pool.query("select model from tany where id= ?",[rentplace],)</script>
+              <h3>아반떼 AD</h3>
+								반납 위치: 노원구 공릉동 서울여자대학교<br>
+								5,570원 (30분 기준)	<br><br>
+          <button type="button" class="btn btn-info">예약하기</button>
+			
+        </div>
+		  <div class="rent_time"><img src="../image/아반떼시간.JPG" width="580" height="47" alt=""/></div>
+		</div>
+		
+    </div>
+    <div class="row">
+		      <div class="middle_box">
+				  <hr><hr>
+		  <div class="IndexLeftIMG"><img src=" 
+              <% data.forEach(function(item,index){ %>
+          <%= item.carPIC1 %>
+          <% });%>" width="643" height="373" alt=""></div>
+		  <div class="TextBoxRight"><br>
+			  <h3>그랜드 스타랙스</h3>
+								반납 위치: 노원구 공릉동 서울여자대학교<br>
+								6,350원 (30분 기준)	<br><br>
+            <a href="detail.ejs">
+			                    <button type="button" class="btn btn-info">예약하기</button>
+            </a>
+          </div>
+		  <div class="rent_time"><img src="../image/스타랙스시간.JPG" width="580" height="47" alt=""/></div>
+		</div>
+    </div>
+	
+    <div class="row">
+		      <div class="middle_box">
+				  <hr><hr>
+		  <div class="IndexLeftIMG"><img src="<% data.forEach(function(item,index){ %>
+          <%= item.carPIC3 %>
+          <% });%>" width="643" height="373" alt=""></div>
+		  <div class="TextBoxRight"><br>
+			  <h3>그랜드 쿠퍼 해치백 </h3>
+								반납 위치: 노원구 공릉동 서울여자대학교<br>
+								6,850원 (30분 기준)	<br><br>
+			<button type="button" class="btn btn-info">예약하기</button>
+			  
+      </div>
+		  <div class="rent_time"><img src="../image/미니쿠퍼시간.JPG" width="580" height="47" alt=""/></div>
+		</div>
+    </div>
+	  
+  </div>
+    </section>
+    <div class="container"> </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyWebsite. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap-4.0.0.js"></script>
+<script type="text/javascript">
+$(function() {
+	$( "#Checkboxes1" ).buttonset(); 
+});
+$(function() {
+	$( "#Datepicker1" ).datepicker(); 
+});
+</script>
+  </body>
+</html>

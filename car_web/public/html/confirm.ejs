@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I Love Tany</title>
+    <!-- Bootstrap -->
+    <link href="../css/Tany_narae.css" rel="stylesheet">
+  <style type="text/css">
+    #navbarDropdown {
+	width: 30px;
+}
+    .blank {
+	width: 30px;
+}
+    .IMGBOX {
+	width: 40%;
+	float: left;
+	margin-left: auto;
+	margin-right: 0px;
+	/* [disabled]display: block; */
+	text-align: center;
+	/* [disabled]-webkit-box-sizing: content-box; */
+	/* [disabled]-moz-box-sizing: content-box; */
+	/* [disabled]box-sizing: content-box; */
+}
+    .IMGFrame {
+	width: 100%;
+	position: static;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+    .InfoStart {
+	background-color: rgba(142,169,219,0.60);
+	width: 100pc;
+	padding-left: 30px;
+	border-radius: 20px;
+}
+    .InfoBox {
+	width: 30%;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+    .InfoValue {
+	width: 70%;
+	float: none;
+	text-align: right;
+	position: static;
+	margin-top: 10px;
+	padding-right: 30px;
+}
+    </style>
+    <link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <!-- <script src="jQueryAssets/jquery-1.11.1.min.js"></script> -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.datepicker.min.js"></script>
+  </head>
+  <body>
+	 <!--해보자-->
+	  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="index.ejs"><div class="LogoBox"><img src="../images/LogoBig.png" width="39" height="40" alt=""/></div></a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active"> <a class="nav-link" href="#">소개 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="#">요금 안내 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="car_enroll.ejs">차량 등록 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="find_car.ejs">예약하기  </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="mypage.ejs">마이페이지 </a> </li>
+           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 사고관리 </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="accident_confirm.ejs">사고 조회 </a> 
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="accident_enroll.ejs">내역 입력 </a> </div>
+            </li>
+          </ul>
+<% data.forEach(function(item,index){ %>
+            <span style="font-size: 14px"><b><%= item.memID%></b></span>  
+<% });%>  &nbsp
+            <a class="nav-link" href="index1.ejs">로그아웃</a>
+         <form class="form-inline my-2 my-lg-0">
+           <input type="search" class="form-control mr-sm-2" placeholder="Search" size="10" aria-label="Search">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+     	</div>
+  </nav>
+<section>
+  <div class="container">
+        <div class="row">
+		  <div class="ThinBlank"></div>
+          <div class="col-lg-12 mb-4 mt-2 text-center">
+            <h2><strong>예약하기</strong></h2>
+          </div>
+			<div class="blank"> </div>
+
+
+        </div>
+  </div>
+	
+  <div class="container ">
+		  <hr><hr>
+	    <div class="row">
+          <div class="IMGFrame">
+			 <div class="IMGmargine"></div>
+			<div class="IMGBOX"><img src="../image/그랜드스타랙스.jpg" width="300" height="210" alt=""/></div>
+			<div class="IMGmargine"></div>	  
+		  </div>
+    </div>
+	
+  <div class="container ">
+		  <hr><hr>
+        <div class="row">
+	  </div>
+        <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"></span>
+
+    <div class="row">   
+	  	<div class="InfoStart">
+	  	  <h5><strong>대여 정보</strong></h5>
+  	  </div>
+		<div class="container"> </div>
+	  <div class="InfoBox">차종</div>
+	  <div class="InfoValue">
+            <% data.forEach(function(item,index){ %>
+			 <%= item.model %>
+			 <% });%>	  
+	  </div>
+	<hr>
+	  <div class="InfoBox">대여일</div>
+	  <div class="InfoValue"><input type="datetime-local"></div>	
+	
+	  <div class="InfoBox">반납일</div>
+	  <div class="InfoValue"><input type="datetime-local"></div>
+        
+      <div class="InfoBox">대여 시간</div>
+	  <div class="InfoValue"> <form method="post"><input type="text" id="time" value="<%data.time%>" name="time">시간</div>
+          
+	<div class="container"> </div>
+	<div class="ThinBlank"></div>
+    </div>
+    <div class="row">
+      <div class="InfoStart">
+        <h5><strong>반납 정보 </strong></h5>
+      </div>
+      <div class="InfoBox">차종</div>
+      <div class="InfoValue">
+              <% data.forEach(function(item,index){ %>
+			 <%= item.model %>
+			 <% });%>	  
+	  </div>
+      <hr>
+      <div class="InfoBox">대여 장소 </div>
+      <div class="InfoValue">서울특별시 공릉동 서울여자대학교</div>
+		
+      <div class="InfoBox">반납 장소 </div>		
+     <div class="InfoValue">서울특별시 공릉동 서울여자대학교</div>
+		<div class="ThinBlank"></div>
+        <input type="submit" value="총액보기" class="center_button" id="calprice"></form>		
+    </div>
+	  
+      <div class="row">
+      <div class="InfoStart">
+        <h5><strong>결제 금액 </strong></h5>
+      </div>
+      <div class="InfoBox">시간당 요금 </div>
+      <div class="InfoValue">
+            <% data.forEach(function(item,index){ %>
+			 <%= item.drivingFEE+item.rentalFEE %>
+			 <% });%> 	  
+	  </div>
+		
+      <div class="InfoBox">총 금액  </div>
+     <div class="InfoValue">
+             <% data.forEach(function(item,index){ %>
+            <%= item.price%>     
+			 <% });%> 	 
+	 </div>
+			  <div class="ThinBlank"></div>
+    </div>
+  </div><!--container End-->
+    <div class="row">
+	<div class="Blank">  
+	<div class="col-sm-4 col-auto mx-auto"> <a class="btn btn-block btn-lg btn-success" href="index.ejs" title="">예약 완료! </a> 
+  </div>
+	 </div>
+    
+	</div>
+  </div>
+    </section>
+    <div class="container"> </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyWebsite. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="../js/popper.min.js"></script> 
+  <script src="../js/Tany_narae.js"></script>
+<script src="../js/bootstrap-4.0.0.js"></script>
+<script type="text/javascript">
+$(function() {
+	$( "#Checkboxes1" ).buttonset(); 
+});
+$(function() {
+	$( "#Datepicker1" ).datepicker(); 
+});
+  </script>
+  </body>
+</html>

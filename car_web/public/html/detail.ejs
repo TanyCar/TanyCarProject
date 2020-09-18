@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I Love Tany</title>
+    <!-- Bootstrap -->
+    <link href="../css/Tany_narae.css" rel="stylesheet">
+  <style type="text/css">
+    #navbarDropdown {
+	width: 30px;
+}
+    .blank {
+	width: 30px;
+}
+    .IMGBOX {
+	/* [disabled]height: 200px; */
+	width: 40%;
+	margin-left: auto;
+	margin-right: 0px;
+	/* [disabled]display: block; */
+	text-align: center;
+	/* [disabled]-webkit-box-sizing: content-box; */
+	/* [disabled]-moz-box-sizing: content-box; */
+	/* [disabled]box-sizing: content-box; */
+	float: left;
+}
+    .IMGFrame {
+	width: 100%;
+	position: static;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+    .InfoStart {
+	background-color: rgba(142,169,219,0.60);
+	width: 100pc;
+	padding-left: 30px;
+	border-radius: 20px;
+}
+    .InfoBox {
+	width: 30%;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+    .InfoValue {
+	width: 70%;
+	float: none;
+	text-align: right;
+	position: static;
+	margin-top: 10px;
+	padding-right: 30px;
+}
+    .middleBox {
+	width: 100%;
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	display: flex;
+}
+  .middle_box {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+  .rentbox {
+	border: 3px solid rgba(142,169,219,0.30);
+	background-color: rgba(221,229,244,1.00);
+	height: auto;
+	margin-top: 50px;
+	color: #212529;
+	margin-bottom: 30px;
+	max-width: 900px;
+	width: 80%;
+}
+  .rentBoxLeft {
+	height: 100px;
+	width: 30%;
+}
+  </style>
+    <link href="../jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+    <link href="../jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <!-- <script src="jQueryAssets/jquery-1.11.1.min.js"></script> -->
+    <link href="../css/Tany_narae.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+  <script src="../jQueryAssets/jquery.ui-1.10.4.datepicker.min.js"></script>
+  </head>
+<body>
+	 <!--해보자-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="index.ejs">
+    <div class="LogoBox"><img src="../images/LogoBig.png" width="39" height="40" alt=""/></div></a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active"> <a class="nav-link" href="#">소개 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="#">요금 안내 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="car_enroll.ejs">차량 등록 </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="find_car.ejs">예약하기  </a> </li>
+           <li class="nav-item active"> <a class="nav-link" href="mypage.ejs">마이페이지 </a> </li>
+           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 사고관리 </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="accident_confirm.ejs">사고 조회 </a> 
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="accident_enroll.ejs">내역 입력 </a> </div>
+            </li>
+          </ul>
+<% data.forEach(function(item,index){ %>
+            <span style="font-size: 14px"><b><%= item.memID%></b></span>  
+<% });%>  &nbsp
+            <a class="nav-link" href="index1.ejs">로그아웃</a>
+         <form class="form-inline my-2 my-lg-0">
+           <input type="search" class="form-control mr-sm-2" placeholder="Search" size="10" aria-label="Search">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+	
+<section>
+  <div class="container ">
+    <div class="row">
+<div class="LeftMargine_Box"></div>
+		
+    </div>
+    <div class="narraow_container">
+	      <div class="row">
+      <div id="detail_BOX">
+	    <div class="car_text_Box">        
+			   <div id="detail_IMG"><img src="../image/그랜드스타랙스.jpg" width="654" height="456" alt=""/></div>
+        <div id="detail_text">
+		  	<h5>이름 : 2017 그랜드 스타렉스</h5>
+			차종 : 대형<br>
+			제조사 : 현대자동차<br>
+			대여위치 : 노원구 공릉동 서울여자대학교<br>
+			반납위치 : 노원구 공릉동 서울여자대학교<br>
+			가격: 6,350원 (30분 기준)<br><br>
+			<a href="confirm.ejs">
+			<button type="button" class="btn btn-info">예약하기</button>
+		  </a>		  </div>
+		  <div class="rent_time"><img src="../image/아반떼시간.JPG" width="580" height="47" alt=""/></div>
+	    </div>
+		  
+		  <div class="car_text_Box">
+			  <h3>기본 정보</h3>
+<table id="info_1"  border="0" cellpadding="5">
+	<tbody>
+    <tr>
+      <td width="50px">인원 : </td>
+      <td width="100">12인승  </td>
+	  <td width="50px">주행 :  </td>
+      <td width="100" >98.4km </td>
+    </tr>
+    <tr>
+      <td>연료 :</td>
+      <td>디젤, LPG</td>
+	  <td>연비 :</td>
+      <td>자동 9.8km/L</td>
+    </tr>
+    <tr>
+      <td>변속 :</td>
+      <td>자동 5단 </td>
+	  <td>구입 :</td>
+      <td>2017년 5 </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+		  
+		  <div class="car_text_Box">
+			   <h3>옵션</h3>
+<table width="100%" border="0" cellpadding="5" id="info_2">
+  <tbody>
+    <tr>
+      <td class="tb_line_under">블랙박스 </td>
+      <td class="tb_line_under">에어백 </td>
+      <td class="tb_line_under">열선시트</td>
+      <td class="tb_line_under">CD </td>
+      <td class="tb_line_under">USB </td>
+      <td class="tb_line_under">블루투스 </td>
+      <td class="tb_line_under">에어컨 </td>
+    </tr>
+    <tr>
+      <td>O </td>
+      <td>O </td>
+      <td>O </td>
+      <td>X </td>
+      <td>O </td>
+      <td>O </td>
+      <td>O </td>
+    </tr>
+  </tbody>
+</table>
+
+		  </div>
+		  
+		  <div class="car_text_Box">
+			   <h3>사고 내역</h3>
+<table width="100%" border="0" cellpadding="5" id="info_3">
+  <tbody>
+    <tr>
+      <td width="15%" class="tb_line_under" >날짜 </td>
+      <td width="15%" class="tb_line_under"> 부위 </td>
+      <td width="70%" class="tb_line_under" >비고 </td>
+    </tr>
+    <tr>
+      <td >2018.03.31</td>
+      <td>범퍼 </td>
+      <td>접촉사고로 범퍼 도색 </td>
+    </tr>
+  </tbody>
+</table>
+		  </div>
+		  
+		</div>
+	  
+	  </div>
+	  </div>
+	  </div>
+    </section>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyWebsite. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap-4.0.0.js"></script>
+<script type="text/javascript">
+$(function() {
+	$( "#Checkboxes1" ).buttonset(); 
+});
+$(function() {
+	$( "#Datepicker1" ).datepicker(); 
+});
+  </script>
+  </body>
+</html>
